@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script>
+    var year = 5;
+    var summ = 0;
+
+    do {
+        var deposit = +prompt("Укажите сумму вклада");
+    } while (isNaN(deposit) || deposit < 0);
+
+    do {
+        var percent = +prompt("Укажите процент");
+    } while (isNaN(percent) || percent < 0);
+
+    for (var i = 1; i <= year; i++) {
+        if (summ == 0) {
+            summ += deposit;
+        }
+        summ += summ / 100 * percent;
+        document.write("Размер вклада " + i +"г.: " + summ.toFixed(2) + "<br />");
+    }
+</script>

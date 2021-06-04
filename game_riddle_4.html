@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<script>
+    var countRight = 0;
+    var answer1 = "водопровод";
+    var answer2 = "граммофон";
+    var answer3_1 = "еж";
+    var answer3_2 = "ёж";
+    var answer4 = "книга";
+
+    var answerUser1 = prompt("Отгадайте загадку: \nРечка спятила с ума —\nПо домам пошла сама.");
+
+    if (answer1 == answerUser1.toLowerCase()) {
+        countRight++;
+
+        alert("Поздравляем, вы отгадали верно!");
+    } else {
+        alert("Не угадали!");
+    }
+
+    var answerUser2 = prompt("Отгадайте загадку: \nМузыкант, певец, рассказчик —\nА всего труба да ящик.");
+
+    if (answer2 == answerUser2.toLowerCase()) {
+        countRight++;
+
+        alert("Поздравляем, вы отгадали верно!");
+    } else {
+        alert("Не угадали!");
+    }
+
+    var answerUser3 = prompt("Отгадайте загадку: \nВот иголки и булавки\nВыползают из-под лавки,\nНа меня они глядят,\nМолока они хотят.");
+
+    if (answer3_1 == answerUser3.toLowerCase() ||
+        answer3_2 == answerUser3.toLowerCase()) {
+        countRight++;
+
+        alert("Поздравляем, вы отгадали верно!");
+    } else {
+        alert("Не угадали!");
+    }
+
+    var answerUser4 = prompt("Отгадайте загадку: \nСтрану чудес откроем мы\nИ встретимся с героями\nВ строчках,\nНа листочках,\nГде станции на точках.");
+
+    if (answer4 == answerUser4.toLowerCase()) {
+        countRight++;
+
+        alert("Поздравляем, вы отгадали верно!");
+    } else {
+        alert("Не угадали!");
+    }
+
+    alert("Вы верно отгадали загадок: " + countRight);
+    alert("Игра окончена.");
+</script>

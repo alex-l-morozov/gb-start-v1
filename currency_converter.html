@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script>
+    var currencyUSD = 73.56;
+    var currencyEUR = 88.97;
+
+    var rur = prompt("Сколько рублей хотите сконвертировать");
+    // Приводим к числу с плавающей точкой
+    rur = parseFloat(rur);
+
+    var usd = rur / currencyUSD;
+    // Выполняем округление до двух знаков после точки
+    usd = usd.toFixed(2);
+
+    var eur = rur / currencyEUR;
+    // Выполняем округление до двух знаков после точки
+    eur = eur.toFixed(2);
+
+    alert(usd + " USD\r\n" + eur + " EUR");
+</script>

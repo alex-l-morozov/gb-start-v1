@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+<script>
+function printArray(number)
+{
+    if (number > 0) {
+        var arr = [];
+        var str = "";
+
+        for(var i = 1; i <= number; i++){
+            arr.push(i);
+            if (str != "")
+                str = str + ", " + i;
+            else
+                str = i;
+        }
+
+        return "[" + str + "]";
+    }
+
+    return false;
+}
+
+function amountFromArray(array)
+{
+    var amount = 0;
+
+    for (var i = 0; i < array.length; i++) {
+        amount += array[i];
+    }
+
+    return amount;
+}
+
+function  maxFromAray(array)
+{
+    var max = array[0];
+
+    for (var i = 1; i < array.length; i++) {
+        if (array[i] > max)
+            max = array[i];
+    }
+
+    return max;
+}
+
+function  minFromAray(array)
+{
+    var min = array[0];
+
+    for (var i = 1; i < array.length; i++) {
+        if (array[i] < min)
+            min = array[i];
+    }
+
+    return min;
+}
+
+function evenFromArray(array)
+{
+    var even = "";
+
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 0) {
+            if (even != "")
+                even = even + ", " + array[i];
+            else
+                even = array[i];
+        }
+    }
+
+    return even;
+}
+
+document.write("Массив из числа 10: " + printArray(10) + "<br />");
+document.write("Сумма чисел в массиве [134, 156, 290, 356] равна: " + amountFromArray([134, 156, 290, 356]) + "<br />");
+document.write("Максимальное число из массива [135, 156, 299, 356, 899, 900]: " + maxFromAray([135, 156, 299, 356, 899, 900]) + "<br />");
+document.write("Минимальное число из массива [135, 156, 299, 356, 899, 900]: " + minFromAray([135, 156, 299, 356, 899, 900]) + "<br />");
+document.write("Четные числа из массива [135, 156, 299, 356, 899, 900]: " + evenFromArray([135, 156, 299, 356, 899, 900]) + "<br />");
+</script>

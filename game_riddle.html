@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script>
+    var countRight = 0;
+
+    function sendRiddle(text, answers)
+    {
+        var answerUser = prompt(text);
+        for (var i = 0; i < answers.length; i++) {
+            if (answers[i] == answerUser.toLowerCase()) {
+                alert("Поздравляем, вы отгадали верно!");
+                return 1;
+            }
+        }
+
+        alert("Не угадали!");
+        return 0;
+    }
+
+    countRight += sendRiddle("Отгадайте загадку: \nВот иголки и булавки\nВыползают из-под лавки,\nНа меня они глядят,\nМолока они хотят.", ["еж","ёж"]);
+    countRight += sendRiddle("Отгадайте загадку: \nРечка спятила с ума —\nПо домам пошла сама.", ["водопровод"]);
+    countRight += sendRiddle("Отгадайте загадку: \nМузыкант, певец, рассказчик —\nА всего труба да ящик.", ["граммофон"]);
+    countRight += sendRiddle("Отгадайте загадку: \nСтрану чудес откроем мы\nИ встретимся с героями\nВ строчках,\nНа листочках,\nГде станции на точках.", ["книга"]);
+
+    alert("Вы верно отгадали загадок: " + countRight);
+    alert("Игра окончена.");
+</script>

@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<script>
+    var answer = "водопровод";
+
+    do {
+        var answerUser = prompt("Отгадайте загадку: \nРечка спятила с ума —\nПо домам пошла сама.");
+    } while (answerUser == "");
+
+    if (answer == answerUser.toLowerCase()) {
+        alert("Поздравляем, вы отгадали верно!");
+    } else {
+        alert("Не угадали!");
+    }
+    alert("Игра окончена.");
+</script>
